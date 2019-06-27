@@ -1,0 +1,64 @@
+delay_pos = [1 10 15 31];
+dop_val = 10;
+snr_db = 10;
+%% 
+delay_vec = [1 0 0 0]; %signle path delay with LOS 
+dop_vec = [0 0 0 0];
+mode = 1;
+chirp_del0_dop0_los = gen_otfs(delay_vec,delay_pos,dop_vec,dop_val,mode,snr_db);
+figure(1);
+subplot(2,2,1);
+imagesc(real(chirp_del0_dop0_los));
+colorbar;
+title('chirp del0 dop0: LOS; real part');
+ylabel('delay');
+xlabel('Doppler');
+subplot(2,2,2);
+imagesc(imag(chirp_del0_dop0_los));
+colorbar;
+title('chirp del0 dop0: LOS; imaginary part');
+ylabel('delay');
+xlabel('Doppler');
+subplot(2,2,3);
+imagesc(angle(chirp_del0_dop0_los));
+colorbar;
+title('chirp del0 dop0: LOS; phase angle');
+ylabel('delay');
+xlabel('Doppler');
+subplot(2,2,4);
+imagesc(abs(chirp_del0_dop0_los));
+colorbar;
+title('chirp del0 dop0: LOS magnitude');
+ylabel('delay');
+xlabel('Doppler');
+
+%% 
+delay_vec = [0 1 0 0]; %signle path delay without LOS 
+dop_vec = [0 0 0 0];
+mode = 1;
+chirp_del1_dop0_los = gen_otfs(delay_vec,delay_pos,dop_vec,dop_val,mode,snr_db);
+figure(2);
+subplot(2,2,1);
+imagesc(real(chirp_del1_dop0_los));
+colorbar;
+title('chirp del1 dop0: nLOS; real part');
+ylabel('delay');
+xlabel('Doppler');
+subplot(2,2,2);
+imagesc(imag(chirp_del1_dop0_los));
+colorbar;
+title('chirp del1 dop0: nLOS; imaginary part');
+ylabel('delay');
+xlabel('Doppler');
+subplot(2,2,3);
+imagesc(angle(chirp_del1_dop0_los));
+colorbar;
+title('chirp del1 dop0: nLOS; phase angle');
+ylabel('delay');
+xlabel('Doppler');
+subplot(2,2,4);
+imagesc(abs(chirp_del1_dop0_los));
+colorbar;
+title('chirp del1 dop0: nLOS magnitude');
+ylabel('delay');
+xlabel('Doppler');

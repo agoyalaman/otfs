@@ -1,0 +1,36 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf400
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww13200\viewh10380\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 General info: \
+\
+1.	mode : 	0 for d-D impulse\
+			1 for d-D chirp\
+			2 for d-D xchirp	    \
+\
+script: 		calc_d_D :		calculates delay and Doppler values for mode 0,1,2. Currently works for single paths only\
+\
+script:		dechirp1, dechirp :	takes a received signal and transmitted signal in the delay-Doppler domain and performs 					de-chirp operation. 'dechirp' plots some figures for analysis.  \
+\
+script:		graph_gen :		plots graphs for different scenarios of delay and Doppler for chirp and xchirp\
+\
+script:		isfft :			takes in a 2-d matrix and returns a isfft-ed 2-d matrix, obeys parseval's theory \
+\
+script:		multiple_paths :	user can set multiple delay and Doppler paths and observe the behavior of d-D impulse, 					chirp and xchirp \
+\
+script:		nlos_d_D_snr :	plots probability of error in estimating a single delay-Doppler path for user specified 					number of iterations and mode\
+\
+script:		ofdm :			performs ofdm \
+\
+script:		otfs :			Patrick's Original otfs script\
+\
+script:		sfft :			takes in a 2-d matrix and returns a sfft-ed 2-d matrix, obeys parseval's theory\
+\
+script:		splot :\
+\
+function:	gen_otfs :		modified Patrick's otfs script; returns d-D rx symbol, chirp,xchirp, and impulse 	\
+\
+Date : May 3, 2019}
