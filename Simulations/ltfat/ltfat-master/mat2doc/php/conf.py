@@ -1,0 +1,7 @@
+fext='.php'
+urlbase='/doc'
+urlext='.php'
+widthstr=''
+imagetype='png'
+includedir='../include'
+audio='<a href="%s">%s</a>'

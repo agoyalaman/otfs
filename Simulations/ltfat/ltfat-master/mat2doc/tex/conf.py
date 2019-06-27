@@ -1,0 +1,5 @@
+fext='.tex'
+urlbase='http://ltfat.github.io/doc'
+urlext='php'
+widthstr='60ex'
+imagetype='png'
